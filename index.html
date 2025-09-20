@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Web Layout</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
 
-        /* Style the header */
-        header {
-            background: #f1f1f1;
-            padding: 10px;
-            text-align: center;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-        /* Style the topnav */
-        ul.topnav {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding:0;
-            background-color: #333333;
-        }
+      /* Style the header */
+      header {
+        background: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+      }
 
-        /* Style links in topnav */
-        ul.topnav li a {
-            display: block;
-            color: #f1f1f1;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
+      /* Style the topnav */
+      ul.topnav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333333;
+      }
 
-        /* Change color on hoover */
-        ul.topnav li a:hover {
-            background-color: #dddddd;
-            color: black;
-        }
+      /* Style links in topnav */
+      ul.topnav li a {
+        display: block;
+        color: #f1f1f1;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change color on hoover */
+      ul.topnav li a:hover {
+        background-color: #dddddd;
+        color: black;
+      }
+
+      /* Style main content */
+
+      div.flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      div.flex-container div {
+        margin: 10px;
+      }
+
+      /* Use media query and show the flex items vertically if screen width is less than 600px */
+      @media screen and (max-width:600px) {
+         div.flex-container {
+            flex-direction: column;
+         }
+      }
     </style>
+  </head>
 
-</head>
-<body>
+
+  <body>
     <!-- Header area -->
-     <header>
-        <h1>My Header</h1>
-     </header>
+    <header>
+      <h1>My Header</h1>
+    </header>
 
-     <!-- Navigation bar -->
-      <nav>
-        <ul class="topnav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>            
-        </ul>
-      </nav>
-</body>
+    <!-- Navigation bar -->
+    <nav>
+      <ul class="topnav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main content  -->
+
+    <div class="flex-container">
+        <div>
+            <h2>Side</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo repellat nam facere obcaecati cupiditate dolores!</p>
+        </div>
+    <div>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+
+  <div>
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.</p>
+  </div> 
+    </div>
+  </body>
 </html>
