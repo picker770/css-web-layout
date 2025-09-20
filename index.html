@@ -55,15 +55,27 @@
         margin: 10px;
       }
 
+      /* footer  */
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        padding: 8px;
+        text-align: center;
+        z-index: 1000;
+      }
+
       /* Use media query and show the flex items vertically if screen width is less than 600px */
-      @media screen and (max-width:600px) {
-         div.flex-container {
-            flex-direction: column;
-         }
+      @media screen and (max-width: 600px) {
+        div.flex-container {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
-
 
   <body>
     <!-- Header area -->
@@ -84,20 +96,44 @@
     <!-- Main content  -->
 
     <div class="flex-container">
-        <div>
-            <h2>Side</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo repellat nam facere obcaecati cupiditate dolores!</p>
-        </div>
-    <div>
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
+      <div>
+        <h2>Side</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+          repellat nam facere obcaecati cupiditate dolores!
+        </p>
+      </div>
+      <div>
+        <h2>Main Content</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit
+          amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget
+          elementum magna tristique. Quisque vehicula, risus eget aliquam
+          placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+          Praesent scelerisque tortor sed accumsan convallis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit
+          amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget
+          elementum magna tristique. Quisque vehicula, risus eget aliquam
+          placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+          Praesent scelerisque tortor sed accumsan convallis.
+        </p>
+      </div>
 
-  <div>
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.</p>
-  </div> 
+      <div>
+        <h2>Side</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit
+          amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget
+          elementum magna tristique.
+        </p>
+      </div>
     </div>
+
+    <!-- Footer area -->
+    <footer>
+      <p>Footer</p>
+    </footer>
   </body>
 </html>
